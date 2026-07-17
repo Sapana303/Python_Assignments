@@ -1,0 +1,357 @@
+# Arithmatic operators
+
+# #addition
+# # 2 + 2
+# '''
+# a = 2
+# b = a + 10
+# print(b)
+# '''
+# a = 10
+# b = 5
+# c = a + b
+# print(c)
+
+# #subtraction
+# d = a - b
+# print(d)
+
+# #multiplication
+# e = d * a
+# print(e)
+
+# #division
+# f = a / b # if a and b are integers, this will return a float
+# print(f)  # this return exact value
+# # k = e / 0 # ZeroDivisionError: division by zero# # print(k)
+
+
+# g = a // b   #this will return an integer (floor division) if both are intergers otherwise any one is float it will give float
+# print(g)
+
+# #modulus
+# h = a % b # return remainder of the division
+# print(h)
+
+# #exponentiation
+# j = a ** 2
+# print(j)
+
+# # p = a ** 0
+# # print(p)
+
+n1 = float(input())
+n2 = float(input())
+
+print(f"Addition: {n1 + n2}")
+print(f"Subtraction: {n1 - n2}")
+print(f"Multiplication: {n1 * n2}")
+
+if n2 != 0:
+    print(f"Division: {n1 / n2}")
+    print(f"Floor Division: {n1 // n2}")
+    print(f"Modulus: {n1 % n2}")
+else:
+    print("Can't divide by zero")
+
+print(f"Exponentiation: {n1 ** n2}")
+
+
+# Assignment Operators
+
+# =
+a = 10
+print(a)
+
+balance = int(input("Enter your wallet balance: "))
+print("Current Balance:", balance)
+
+# +=
+salary = int(input("Enter salary credited: "))
+balance += salary
+print("Balance after salary:", balance)
+
+# -=
+grocery = int(input("Enter grocery expense: "))
+balance -= grocery
+print("Balance after grocery shopping:", balance)
+
+# *=
+balance *= 2
+print("Balance after double reward:", balance)
+
+# /=
+trip = int(input("Enter total trip cost: "))
+friends = int(input("Enter number of friends: "))
+
+trip /= friends
+print("Each friend has to pay:", trip)
+
+balance -= trip
+print("Balance after paying your share:", balance)
+
+# //= floor division
+daily_budget = balance
+daily_budget //= 30
+print("Daily budget for 30 days:", daily_budget)
+
+# %=
+remaining = balance
+remaining %= 30
+print("Money left after dividing for 30 days:", remaining)
+
+# **=
+investment = int(input("Enter investment amount: "))
+power = int(input("Enter the power: "))
+
+investment **= power
+print("Investment value:", investment)
+
+
+print("Final Balance:", balance)
+print("Daily Budget:", daily_budget)
+print("Remaining Money:", remaining)
+print("Investment Value:", investment)
+
+# Bitwise Operators
+
+a = int(input("a = "))
+b = int(input("b = "))
+c = 10
+print(bin(c)) # it will print with 0b prefix
+print(bin(c)[2:]) # it will print without 0b prefix , starts from 2nd index
+
+# AND
+print(f"a & b = {a & b}")
+
+# OR
+print(f"a | b = {a | b}")
+
+# XOR
+print(f"a ^ b = {a ^ b}")
+
+# NOT
+print(f"~a = {~a} and ~b = {~b}")
+
+# << (multiplication by 2)
+print(f"a << 1 = {a << 1} and a << 2 = {a << 2}")
+
+# >> (division by 2 -> give floor value)
+print(f"a >> 1 = {a >> 1} and b >> 2 = {b >> 2}")
+
+
+# Identity operators
+
+# is - check for same id (memory reference)
+# is not - check for different id (memory reference)
+# evry value in python is an object and every object has an identity (id) which is unique and constant for this object during its lifetime. The id of an object can be obtained using the built-in id() function.
+# objcts properties : 1. value 2. type 3. identity(memory address)
+
+# *Immutable* objects (like int, float, string, tuple) with the same value may
+# have the *same id (memory reference) due to interning,
+# while *mutable* objects (like list, dict, set) will always
+# have *different ids even if they have the same content.
+
+# immutable
+a = 10
+b = 10
+print(id(a))
+print(id(b))
+print(a is b)   # True
+
+# mutable
+a = [1, 2, 3]
+b = [1, 2, 3]
+print(id(a))
+print(id(b))
+print(a is b)  # False
+
+
+# logical Operators
+
+def student_eligibility_checker(age, attendance, marks, fee):
+    # AND
+    if age > 18 and attendance >= 75 and fee ==  True:
+        print("You are eligible for the exam")
+    else:
+        print("You are not eligible for the exam")
+ 
+    #OR
+    if attendance >= 90 or marks >= 95:
+        print("You are eligible for the scholarship")
+    else:
+        print("You are not eligible for the scholarship")
+ 
+    # NOT
+    if not fee:
+        print("Please pay the exam fee)")
+ 
+    # XOR
+    if marks >= 95 ^ attendance >= 95:
+        print("You are eligible for the special award")
+    else:
+        print("You are not eligible for the special award")
+
+
+if __name__ ==  '__main__':
+    age = int(input("Age: "))
+    attendance = int(input("Attendance: "))
+    marks = int(input("Marks: "))
+    fee = input("Fee Paid (True/False): ") == 'True'
+    student_eligibility_checker(age, attendance, marks, fee)
+
+# Membership operators
+
+# in -> if a value is exist in a container(list,tuple,string,dict) then it will return True otherwise False
+# not in -> if a value is not exist in a container
+a = [1, 2, 3, 4, 5]
+print(3 in a)
+print(3 not in a)
+
+b = (1, 2, 3, 4, 5)
+print(7 in b)
+print(7 not in b)
+
+c = {1, 2, 3, 4, 5}
+print(4 in c)
+print(4 not in c)
+
+s = "Hello World"
+print("H" in s)
+print(" " in s)
+
+d = {"name": "John", "age": 30, "city": "New York"}
+print("John" in d.values())
+print("John" not in d.values())
+print("name" in d.keys())
+print("name" not in d.keys())
+
+# Relational Operators
+
+a = 10
+b = 20
+c = 10
+
+
+# equal to
+# print(a == a)
+print(a == b)
+print(a == c)
+
+#not equal to
+print(a != b)
+print(a != c)
+
+#greater than
+print(a > b)
+print(a > c)
+
+#less than
+print(a < b)
+print(a < c)
+
+#less than or equal to
+print(a <= b)
+print(a <= c)
+
+#greater than or equal to
+print(a >= b)
+
+# Mutable Immutable
+
+# s = "sapana"
+# print(s)
+# print(id(s))
+# # s[0] = 'S' # 'str' object does not support item assignment
+# # print(s)
+# s = 'Sapana' # this will create a new string
+# print(id(s))
+
+# s = s[0].upper() + s[1:] # this will create a new string with first letter capitalized
+# print(s)
+# s = 'S' + s[1:] # this will create a new string with first letter capitalized
+# print(s)
+
+#Methods that modify the object (return None)
+a.append()
+a.sort()
+a.reverse()
+a.extend([6, 7]) #
+
+
+# append() -> Modifies the list in place and Returns None
+a = [1,2,3,4]
+print(a) # print a [1,2,3,4]
+# a = a.append(5)
+# print(a) # None ->because append() this function create new modified list now a point to none
+b = a.append(6)
+print(a) # print updated list [1,2,3,4,6]
+print(b) #None
+
+
+# Control Statements
+
+# Sometimes we need to control the flow of our program. We can use control statements to do this.
+# control statements allow us to:
+# execute something only if a condition is true.
+# repeat something many times.
+# stop execution early.
+# skip some statements.
+# need to break the loop for a condition
+
+# decision making statements
+# if
+a=10
+if a == 19:
+    print("prime number")
+
+# if-else
+rain = True
+if rain:
+    print("Take an umbrella")
+else:
+    print("No need for an umbrella")
+
+# if-elif-else
+age = 18
+if age < 18:
+    print("Young")
+elif age >= 18 and age < 60:
+    print("adult")
+else:
+    print("senior citizen")
+
+# nested if
+grade = 'A'
+marks = 95
+if grade == 'A':
+    if marks >= 90:
+        print("Excellent")
+    else:
+        print("Good")
+
+
+# loop statements (for, while)
+
+n = int(input("Enter a number: "))
+sum = 0
+for i in range(1, n+1, 2): # repeat fixed number of times
+    sum += i
+print(f"Sum = {sum}")
+
+P = 10
+while P > 0: # repeat until condition is true
+    print(P)
+    P -= 1
+
+
+# Jump statements (break, continue, pass)
+for i in range(1, 100, 25):
+    if i == 26:
+        continue
+    if i == 51:
+        break
+    print(i)
+
+# Confusion
+# between value, literal and object
