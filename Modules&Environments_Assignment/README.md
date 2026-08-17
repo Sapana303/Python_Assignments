@@ -1,4 +1,3 @@
-````markdown
 # Modules and Environments Assignment
 
 This assignment demonstrates the use of Python modules, packages, virtual
