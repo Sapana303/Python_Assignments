@@ -52,19 +52,19 @@ The system follows these business rules:
 ## Vehicle Rules
 
 ### Car
-
-```text
-Rental cost = daily rate × number of days
-Bike
 Rental cost = daily rate × number of days
 
+### Bike
+Rental cost = daily rate × number of days
 5% discount is applied when rental duration is greater than 5 days.
-Van
+
+### Van
 Rental cost = daily rate × number of days + service charge
+
 
 Each vehicle type implements its own rental-cost calculation through the common Vehicle interface/abstract contract.
 
-Rental Lifecycle
+### Rental Lifecycle
 
 A rental follows these states:
 
@@ -77,7 +77,8 @@ Confirmed
 Vehicle Returned
    ↓
 Completed
-Reservation and Payment Flow
+
+### Reservation and Payment Flow
 
 When a reservation is created:
 
@@ -111,7 +112,7 @@ PaymentFailedError is raised
 
 This prevents another customer from booking the vehicle during the payment process while ensuring that the rental is not confirmed until payment succeeds.
 
-Invoice Generation
+### Invoice Generation
 
 The final invoice is generated when a confirmed rental is returned.
 
@@ -156,9 +157,9 @@ invoice.display()
 
 Therefore, the invoice is currently displayed automatically as part of the Return Vehicle operation. There is no separate "Print Invoice" menu option.
 
-Mandatory Demonstration
+### Mandatory Demonstration
 
-The assignment scenario can be performed through the console menu.
+The assignment scenario performed through the console menu.
 
 The required demonstration consists of:
 
@@ -198,7 +199,8 @@ Therefore:
 The vehicle is unavailable during the payment process.
 The rental is not confirmed until payment succeeds.
 If payment fails, the vehicle becomes available again.
-OOP Mapping
+
+### OOP Mapping
 OOP Concept	Evidence in Project
 Abstraction	Vehicle(ABC) and PaymentProcessor(ABC)
 Hierarchical Inheritance	Car(Vehicle), Bike(Vehicle), Van(Vehicle)
@@ -242,7 +244,7 @@ This makes the system easier to extend.
 
 If a new vehicle type such as Truck is added, the new class can implement the same method without requiring major changes to the existing rental workflow.
 
-Project Structure
+### Project Structure
 vehicle_rental_system/
 │
 ├── main.py
@@ -276,7 +278,8 @@ vehicle_rental_system/
     ├── test_customer.py
     ├── test_rental.py
     └── test_payment.py
-How to Run
+    
+### Steps to Run
 1. Create a Virtual Environment
 Windows PowerShell
 python -m venv .venv
@@ -296,7 +299,7 @@ The application starts as a console-based menu system.
 
 Running the Tests
 
-Run all unit tests using:
+### Run all unit tests using:
 
 python -m unittest discover -s tests -v
 
@@ -308,7 +311,7 @@ OK
 
 The exact number of tests may change if additional tests are added later.
 
-Testing Coverage
+### Testing Coverage
 
 The test suite covers:
 
@@ -341,7 +344,7 @@ Exception Handling
 
 The project uses custom exceptions instead of relying only on generic Python exceptions.
 
-The exception hierarchy includes:
+### The exception hierarchy includes:
 
 RentalError
 │
@@ -359,11 +362,9 @@ raise PaymentFailedError(...)
 
 This allows the application to provide meaningful error messages for different business situations.
 
-Class Diagram
+### Class Diagram
 
-See:
-
-class_diagram.md
+Inside: class_diagram.md
 
 The class diagram documents:
 
@@ -375,7 +376,7 @@ Invoice relationship
 Service-layer dependencies
 Design Principles Demonstrated
 
-The project demonstrates the following design principles:
+### The project demonstrates the following design principles:
 
 Single Responsibility
 
@@ -391,7 +392,7 @@ Open/Closed Principle
 
 New vehicle types can be introduced by extending Vehicle and implementing the required behavior without rewriting the complete rental workflow.
 
-Dependency Inversion
+### Dependency Inversion
 
 RentalService does not directly depend on a specific payment method.
 
