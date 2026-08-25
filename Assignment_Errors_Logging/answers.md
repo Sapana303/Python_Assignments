@@ -91,14 +91,13 @@ Logs can be stored in a file such as student_app.log, allowing developers to inv
 print() is mainly used to display information directly to the user on the console.
 
 Logging is designed to record application events and errors for monitoring, debugging, and troubleshooting
-Therefore:
-
-###     print()	                                           Logging
-Displays information on the console	           Can write information to a log file
-Mainly for user output	                       Mainly for application monitoring
-No built-in severity levels	                   Has levels such as DEBUG, INFO, WARNING, ERROR, CRITICAL
-Harder to control in large applications	       Can filter messages by logging level
-Usually temporary/debug output	               Useful for maintaining a history of application events
+| `print()` | Logging |
+|---|---|
+| Displays information on the console | Can write information to a log file |
+| Mainly for user output | Mainly for application monitoring |
+| No built-in severity levels | Has levels such as DEBUG, INFO, WARNING, ERROR, CRITICAL |
+| Harder to control in large applications | Can filter messages by logging level |
+| Usually temporary/debug output | Useful for maintaining a history of application events |
 
 For example:
 
