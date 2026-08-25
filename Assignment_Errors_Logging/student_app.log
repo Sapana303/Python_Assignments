@@ -24,3 +24,13 @@ WARNING: Student mark is below passing range.
 INFO: Marks entered successfully.
 INFO: Average calculated successfully.
 INFO: Student result calculated successfully.
+
+============================================================
+INFO: Application started.
+INFO: Student processing started.
+INFO: Student name received.
+WARNING: Student mark is below passing range.
+INFO: Marks entered successfully.
+INFO: Average calculated successfully.
+INFO: Student result calculated successfully.
+INFO: Student statistics calculated successfully.
