@@ -1,10 +1,10 @@
-1. What is exception handling?
+### 1. What is exception handling?
 
 Exception handling is a way of handling errors that occur while a Python program is running. Instead of allowing the program to crash, we can use try, except, else, and finally to handle errors properly and continue or safely stop the program.
 
 For example, if a user enters "abc" when the program expects a number, Python raises a ValueError. Exception handling allows us to catch this error and display a meaningful message.
 
-2. Why should we use exception handling?
+### 2. Why should we use exception handling?
 
 We should use exception handling to prevent unexpected errors from crashing the application.
 
@@ -18,7 +18,7 @@ Debugging problems can become more difficult.
 
 Exception handling makes programs more reliable and user-friendly.
 
-3. What is the difference between try and except?
+### 3. What is the difference between try and except?
 
 The try block contains code that may cause an exception.
 
@@ -35,7 +35,8 @@ Here:
 
 try → attempts to convert the input to an integer.
 except → handles the ValueError if the conversion fails.
-4. When is the else block executed?
+
+### 4. When is the else block executed?
 
 The else block is executed only when no exception occurs in the try block.
 
@@ -52,7 +53,7 @@ If the user enters 25, the else block executes.
 
 If the user enters abc, the except block executes and the else block is skipped.
 
-5. When is the finally block executed?
+### 5. When is the finally block executed?
 
 The finally block is executed whether an exception occurs or not.
 
@@ -69,7 +70,7 @@ finally:
 
 The message "Processing completed." is printed whether the conversion succeeds or fails.
 
-6. What is logging?
+### 6. What is logging?
 
 Logging is the process of recording important information about what happens inside a program.
 
@@ -85,18 +86,17 @@ Detailed debugging information
 
 Logs can be stored in a file such as student_app.log, allowing developers to investigate problems after the application has run.
 
-7. What is the difference between print() and logging?
+### 7. What is the difference between print() and logging?
 
 print() is mainly used to display information directly to the user on the console.
 
-Logging is designed to record application events and errors for monitoring, debugging, and troubleshooting.
-
-print()	Logging
-Displays information on the console	Can write information to a log file
-Mainly for user output	Mainly for application monitoring
-No built-in severity levels	Has levels such as DEBUG, INFO, WARNING, ERROR, CRITICAL
-Harder to control in large applications	Can filter messages by logging level
-Usually temporary/debug output	Useful for maintaining a history of application events
+Logging is designed to record application events and errors for monitoring, debugging, and troubleshooting
+###     print()	                                           Logging
+Displays information on the console	           Can write information to a log file
+Mainly for user output	                       Mainly for application monitoring
+No built-in severity levels	                   Has levels such as DEBUG, INFO, WARNING, ERROR, CRITICAL
+Harder to control in large applications	       Can filter messages by logging level
+Usually temporary/debug output	               Useful for maintaining a history of application events
 
 For example:
 
@@ -110,7 +110,7 @@ logging.error("Invalid input received.")
 
 records an error in the configured logging destination.
 
-8. What happens when the logging level is set to ERROR? Which log levels will be recorded?
+### 8. What happens when the logging level is set to ERROR? Which log levels will be recorded?
 
 When the logging level is set to:
 
@@ -123,16 +123,16 @@ only messages with level ERROR or higher are recorded.
 
 Therefore:
 
-Log Level	Recorded?
-DEBUG	No
-INFO	No
-WARNING	No
-ERROR	Yes
-CRITICAL	Yes
+### Log Level	Recorded?
+    DEBUG	      No
+    INFO	      No
+    WARNING	      No
+    ERROR	      Yes
+    CRITICAL	  Yes
 
 This happens because logging levels have an order of severity. Setting the level to ERROR filters out messages that are less severe than ERROR.
 
-9. What happens if we do not handle ValueError when converting user input using int()?
+### 9. What happens if we do not handle ValueError when converting user input using int()?
 
 If invalid input is passed to int(), Python raises a ValueError.
 
@@ -155,7 +155,7 @@ except ValueError:
 
 allows the program to handle the invalid input without crashing.
 
-10. Why should we avoid using a broad exception handler such as except: pass?
+### 10. Why should we avoid using a broad exception handler such as except: pass?
 
 We should avoid:
 
@@ -182,7 +182,7 @@ except ValueError:
 
 This makes the program safer, clearer, and easier to debug.
 
-11. Why is logging useful in a production application?
+### 11. Why is logging useful in a production application?
 
 Logging is useful in production because developers usually cannot watch the application directly while users are using it.
 
@@ -203,7 +203,7 @@ ERROR: Database connection failed.
 
 in the log can help developers identify the problem.
 
-12. What is the purpose of the finally block?
+### 12. What is the purpose of the finally block?
 
 The purpose of the finally block is to execute code that should run regardless of whether an exception occurs.
 
