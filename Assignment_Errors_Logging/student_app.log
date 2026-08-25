@@ -1,11 +1,5 @@
-ERROR: Invalid number of subjects entered.
-INFO: Application started.
-INFO: Student processing started.
-INFO: Student name received.
-INFO: Marks entered successfully.
-INFO: Average calculated successfully.
-INFO: Student result calculated successfully.
-
+ERROR: Invalid mark entered.
+ERROR: Invalid mark entered.
 ============================================================
 INFO: Application started.
 INFO: Student processing started.
@@ -14,19 +8,7 @@ WARNING: Student mark is below passing range.
 INFO: Marks entered successfully.
 INFO: Average calculated successfully.
 INFO: Student result calculated successfully.
-
-============================================================
-INFO: Application started.
-INFO: Student processing started.
-INFO: Student name received.
-WARNING: Student mark is below passing range.
-WARNING: Student mark is below passing range.
-INFO: Marks entered successfully.
-INFO: Average calculated successfully.
-INFO: Student result calculated successfully.
-
-============================================================
-INFO: Application started.
+INFO: Student statistics calculated successfully.
 INFO: Student processing started.
 INFO: Student name received.
 WARNING: Student mark is below passing range.
