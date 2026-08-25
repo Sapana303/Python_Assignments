@@ -114,6 +114,17 @@ def process_student():
         print(f"Result       : {result}")
 
         logging.info("Student result calculated successfully.")
+        
+        highest_mark = max(marks)
+        lowest_mark = min(marks)
+
+        print("\n----- Student Statistics -----")
+        print(f"Highest Mark : {highest_mark:.2f}")
+        print(f"Lowest Mark  : {lowest_mark:.2f}")
+        print(f"Average Mark : {average:.2f}")
+        print(f"Result       : {result}")
+
+        logging.info("Student statistics calculated successfully.")
 
     finally:
         print("Processing completed.")
@@ -133,6 +144,8 @@ def main():
 
 if __name__ == "__main__":
     main()
+    
+
     
 
 
